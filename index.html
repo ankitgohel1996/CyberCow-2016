@@ -1,0 +1,178 @@
+
+<!doctype html>
+<html>
+
+<head>
+	<title>CyberCow | Prometheus </title>
+	<link rel="icon" href="favicon.ico">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="CyberCow" />
+	<meta property="og:description" content="CyberCow is the precursor to an online scavenging hunt where you match wits against hundreds of participants solving cryptic puzzles and much more." />
+	<meta property="og:type" content="website" />
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="hash.js"></script>
+	<script type="text/javascript" src="default.js"></script>
+
+	
+	<link href="default.css" rel="stylesheet" type="text/css"/>
+	<link href="FontAwesomeCSS.css" rel="stylesheet" type="text/css"/>
+	
+<head>
+
+<body>
+
+	<div class="header">
+		<div class='techtatvaLogo clickable'><img src='logo.png' class='ttLogo'></div>
+		<div class='cyberhawkTitle clickable'><b>CyberCow</b> | Prometheus</div>
+		<div class='logout clickable'>logout</div>
+		<div class='myName'>Hi, <b><span id='playerName'>Player</span></b></div>
+	</div>
+	
+	<div class="loginContainer" id='login'>
+		<div class='loginBox' style='border-radius:30px;color:#00FF63;background-color:#111111'>
+			
+			
+			<div class='loginMessage'>
+				<span id='loginMessage'></span>
+			</div>
+			
+			
+			<img src='mainLogo.png' class='loginLogo'>
+			<div class='titleText' style='color:#00FF63'>CyberCow</div>
+			<div class='subTitleText' style='color:#00FF63'>The Conqueror of Cyberspace</div>
+
+			<div class='SPACER-20'></div>
+			
+			<!-- <form id='loginForm'>
+			
+			<input type='text' id='email' class='inputLogin' name='EMAIL' placeholder="EMAIL"  style='background-color:#333333; color:#00FF63'>
+			<input type='password' id='password' class='inputLogin' name='PASSWORD'  placeholder="PASSWORD" style='background-color:#333333; color:#00FF63'>
+			<div class='registerButton button'>REGISTER</div> -->
+			<div class='SPACER-40'></div>
+			<div class='SPACER-20'></div>
+			<div class='loginButton button'>GET STARTED</div>
+			
+			<!-- </form> -->
+			
+		</div>
+	</div>
+	
+	
+	<!-- <div class="registerContainer" id='register'>
+		<div class='registerBox' style='border-radius:30px;color:#00FF63;background-color:#111111'>
+			
+			
+			<div class='registerMessage'>
+				<span id='registerMessage'></span>
+			</div>
+			
+			<div class='SPACER-10'></div>
+			
+			<div class='titleText' style='color:#00FF63;'>Registration</div>
+			<div class='SPACER-10'></div>
+			
+			<form id='registerForm' method='post' accept-charset='UTF-8' >
+			
+			<input type='text' id='name' class='inputLogin' name='NAME' placeholder="NAME" style='background-color:#333333; color:#00FF63'>
+			<input type='email' id='regemail' class='inputLogin' name='EMAIL' placeholder="EMAIL" style='background-color:#333333; color:#00FF63'>
+			<input type='password' id='regpassword' class='inputLogin' name='PASSWORD'  placeholder="PASSWORD" style='background-color:#333333; color:#00FF63'>
+			<input type='password' id='confirmpassword' class='inputLogin' placeholder="CONFIRM PASSWORD" style='background-color:#333333; color:#00FF63'>
+			<input type='text' id='phone' maxlength=10 class='inputLogin' name='PHONE'  placeholder="PHONE NUMBER" style='background-color:#333333; color:#00FF63'>
+			<input type='text' id='college' class='inputLogin' name='COLLEGE'  placeholder="COLLEGE" style='background-color:#333333; color:#00FF63'>
+			
+			<div class='registerMeButton button'>REGISTER</div>
+			<div class='gotoLoginButton button'>LOGIN</div>
+			
+			</form>
+			
+		</div>
+	</div> -->
+	
+	
+	
+	<div class="contentContainer" id='gamePlay' style='border-radius:30px'>
+		<img id=cow_animation class='hidden' src="cowimage.png">
+		<div class='box' style='background-color:#111111'>
+		
+			<div id='hawkLogoBox' class='container' style='background-color: #111111;color:#00FF63;'>
+				<img src='mainLogo.png' class='mainLogo'>
+
+				<div class='titleText' style='background-color: #111111;color:#00FF63;'>CyberCow</div>
+				<div class='subTitleText1' style='background-color: #111111;color:#00FF63;'>To meet the hawk, first get past the cow!</div>
+
+				<div class='SPACER-40'></div>
+				<div class='rules button'>RULES</div>
+				<div class='SPACER-40'></div>
+
+			</div>
+			<div id='rulesBox' class='container' style='background-color: #111111;color:#00FF63;'>
+				<div class='SPACER-20' style='background-color: #111111;color:#00FF63;'></div>
+				<div class='titleText' style='font-size: 25px;background-color: #111111;color:#00FF63;'><b>CyberCow Rules</b></div>
+				<div class='SPACER-20' style='background-color: #111111;color:#00FF63;'></div>
+				<div class='rulesContainer' style='background-color: #111111;color:#00FF63;'>
+					<br>One account per user. <br><br>
+					Participants have to be a student of an Indian Institute.<br><br>
+					Multiple IDs, Improper Logs, People playing in groups will be banned.<br><br>
+					The answer of 'cow 12' will be 'cowonetwo'. Similarly, 'Cyber Cow' will be 'cybercow'.<br><br>
+					<br><br>
+				</div>
+			</div>
+		</div>
+
+		<div class='box questionBox' style='background-color:#333333;'>
+			<div class='levelContainer' style='background-color: #111111;color:#00FF63;'>
+			Level <span id='playerLevel'></span>
+			</div>
+			
+			<div class='question' style='background-color:#333333; color:#00FF63'>
+				<span id='playerQuestion' style='background-color:#333333; color:#00FF63'>Loading...</span>
+			</div>
+			
+			<div class='answerContainer' style='background-color: #111111'>
+				<input type='text' id='playerAnswer' class='input' class='button' name='answer' style='float: left ; background-color:#333333; color:#00FF63' placeholder="WHAT'S YOUR PLAY?">
+				<div id='madcow' class='answerSubmit'>SUBMIT</div>
+			</div>
+			<div class='answerStatus' style='background-color: #111111;color:#00FF63;'>
+				The cow is ready.
+			</div>
+		</div>
+
+		<div class='box' style='background-color: #111111;color:#00FF63;'>
+		
+			<div id='hintsPositionBox'>
+			
+				<div class='SPACER-40'></div>
+				<div id="hints_button" class='hints button'>GET HINTS</div>
+				<div class='SPACER-40'></div>
+				
+			</div>
+			
+			<div id='hintRecentBox' style='background-color: #111111;color:#00FF63;'>
+				<div class='SPACER-20'></div>
+				<div class='titleText' style='font-size: 25px;background-color: #111111;color:#00FF63;'><b>Hints</b></div>
+				<div class='SPACER-20'></div>
+				<div class='rulesContainer'>
+					<span id='hints' style='background-color: #111111;color:#00FF63;'>
+						No hints are available at the moment. Don't forget to keep checking this place.
+					<span>
+				</div>	
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<<div class="footer">
+		<div class='cyberHawkTeam footerButton clickable' style='margin-right: 500px;'>Stay tuned for the hawk's arrival at 2am!</div>
+		
+	</div>
+
+
+</body>
+
+</html>
+
